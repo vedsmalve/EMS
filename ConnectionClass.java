@@ -7,8 +7,8 @@ public class ConnectionClass {
     ConnectionClass (){
         try
         {
-                        Class.forName("com.mariadb.jdbc.Driver");
-                        con=DriverManager.getConnection("jdbc:mariadb://localhost:3306/employee_management","root","root");
+                        Class.forName("com.mysql.jdbc.Driver");
+                        con=DriverManager.getConnection("jdbc:mysql://localhost:3306/employee_management","root","root");
                         stm=con.createStatement();
                         }
             catch(Exception ex){
