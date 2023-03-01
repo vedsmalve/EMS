@@ -4,61 +4,50 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
+import java.util.Locale;
 
 
 
-public class LoginPage  extends JFrame implements ActionListner
+public class LoginPage  extends JFrame implements ActionListener
 {
     JFrame f;
-    JLabel 11,12;
+    JLabel a1,a2;
     JTextField t1;
     JPasswordField t2;
     JButton b1,b2;
     
     LoginPage ()
     {
-        f=new Jframe("Login");
+        f=new JFrame("Login");
         
-        f.setBckground(Color.WHITE);
+        f.setBackground(Color.WHITE);
         f.setLayout(null);
         
-        l1=new JLabel("UserName");
-        l1.setBounds(40,20,100,30);
-        f.add(l1);
-        
-         
-        l2=new JLabel("Password");
-        l1.setBounds(40,70,100,30);
-        f.add(l2);
-        
-        t1=newJTextfield();
-        t1.setBounds(150,20,150,30);
-        f.add(t1);
-        
-        t1=newJPasswordField();
+        a1=new JLabel("UserName"); 
+        t1=new JPasswordField();
         t1.setBounds(150,20,150,30);
         f.add(t1);
         
         ImageIcon i1= new ImageIcon (ClassLoader.getSystemResource("employee_management/Icon/lock.png"));
         Image i2=i1.getImage().getScaledInstance(150,150,Image.SCALE_DEFAULT);
         ImageIcon i3=new ImageIcon(i2);
-        JLabel l3=newJLabel(i3);
+        JLabel l3=new JLabel(i3);
         l3.setBounds(350,20,150,150);
         f.add(l3);
         
         b1=new JButton("Login");
-        b1.setBackground(color.BLACK);
+        b1.setBackground(Color.BLACK);
         b1.setBounds(40,140,120,30);
-        b1.addActionListner(this);
-        b1.setForeground(color.WHITE);
+        b1.addActionListener(this);
+        b1.setForeground(Color.WHITE);
         f.add(b1);
         
         
         b2=new JButton("Close");
-        b2.setBackground(color.BLACK);
+        b2.setBackground(Color.BLACK);
         b2.setBounds(180,140,120,30);
-        b2.addActionListner(this);
-        b2.setForeground(color.WHITE);
+        b2.addActionListener(this);
+        b2.setForeground(Color.WHITE);
         f.add(b2);
         
         f.getContentPane();
@@ -68,6 +57,7 @@ public class LoginPage  extends JFrame implements ActionListner
         f.setLocation(400,300);
         
     }
+    
     public void actionPerformed(ActionEvent ee)
     {
         if(ee.getSource()==b1)
@@ -77,12 +67,12 @@ public class LoginPage  extends JFrame implements ActionListner
                 ConnectionClass obj=new ConnectionClass();
                 String name=t1.getText();
                 String pass=t2.getText();
-                String g="select * from logindata where username='"+name+"'  and password='"+pass+"'";
+                String q="select * from logindata where username='"+name+"'  and password='"+pass+"'";
                 ResultSet rs=obj.stm.executeQuery(q);
                 if(rs.next())
                 {
 //                    new HomePage().setVisible(true);
-                    this.setVisible(false);
+                      f.setVisible(false);
                 }
                 else
                 {
