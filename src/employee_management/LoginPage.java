@@ -64,7 +64,7 @@ public class LoginPage  extends JFrame implements ActionListener
         f.getContentPane();
         
         f.setVisible(true);
-        f.setSize(500,240);
+        f.setSize(540,240);
         f.setLocation(400,300);
         
     }
