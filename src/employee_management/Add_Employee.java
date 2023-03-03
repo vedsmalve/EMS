@@ -81,7 +81,7 @@ public class Add_Employee implements ActionListener
         id.add(id6);
         
         t5=new JTextField();
-        t5.setBounds(600,350,150,30);
+        t5.setBounds(200,250,150,30);
         id.add(t5);
         
         
