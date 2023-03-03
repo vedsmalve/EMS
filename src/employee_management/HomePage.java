@@ -154,31 +154,31 @@ public class HomePage extends JFrame implements ActionListener
       String comnd=e.getActionCommand();
       if(comnd.equals("Complete Profile"))
       {
-          new Add Employee();
+          new Add_Employee();
       }
       else if(comnd.equals("View Profile"))
       {
-          new View Employee();
+          new View_Employee();
       }
       else if(comnd.equals("Update Details"))
       {
-          new Update Details Data().setVisible(true);
+          new Update_Details_Data().setVisible(true);
       }
       else if(comnd.equals("Take Attendence"))
       {
-          new View Attendence().setVisible(true);
+          new View_Attendence().setVisible(true);
       }
       else if(comnd.equals("View Attendence"))
       {
-          new View Attendence().setVisible(true);
+          new View_Attendence().setVisible(true);
       }
       else if(comnd.equals("Apply Leave"))
       {
-          new Apply Leave().setVisible(true);
+          new Apply_Leave().setVisible(true);
       }
       else if(comnd.equals("View Leaves"))
       {
-          new View Leaves().setVisible(true);
+          new View_Leaves().setVisible(true);
       }
       else if(comnd.equals("Add Salary"))
       {
@@ -186,11 +186,11 @@ public class HomePage extends JFrame implements ActionListener
       }
        else if(comnd.equals("Generate Salary Slip"))
        {
-            new Generate PaySlip().setVisible(true);
+            new Generate_PaySlip().setVisible(true);
        }
        else if(comnd.equals("Delete Employee"))
        {
-            new Delete Employee().setVisible(true);
+            new Delete_Employee().setVisible(true);
        }
        else if(comnd.equals("Logout"))
        {
