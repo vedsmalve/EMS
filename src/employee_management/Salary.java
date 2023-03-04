@@ -110,7 +110,7 @@ public class Salary extends JFrame implements ActionListener{
         t1.setEditable(false);
         t2.setEditable(false);
         
-        ImageIcon img=new ImageIcon(ClassLoader.getSystemResource("employee_management/Icon/salary.jpg"));
+        ImageIcon img=new ImageIcon(ClassLoader.getSystemResource("employee_management/Icon/salary.jpeg"));
         Image image=img.getImage().getScaledInstance(400,600,Image.SCALE_DEFAULT);
         ImageIcon img1=new ImageIcon(image);
         l11=new JLabel(img1);
