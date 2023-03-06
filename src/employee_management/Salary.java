@@ -17,7 +17,7 @@ public class Salary extends JFrame implements ActionListener{
     Salary(){
         super("Salary");
         setSize(950,700);
-        setLocation(100,100);
+        setLocation(200,22);
         setResizable(false);
         
         f= new Font("Arial",Font.BOLD,18);
@@ -67,6 +67,7 @@ public class Salary extends JFrame implements ActionListener{
         ch2.add("November");
         ch2.add("December");
         
+        ch3 = new Choice();
         ch3.add("2018");
         ch3.add("2019");
         ch3.add("2020");
@@ -84,7 +85,6 @@ public class Salary extends JFrame implements ActionListener{
         l8.setFont(f);
         l9.setFont(f);
         l10.setFont(f);
-        l11.setFont(f);
         l12.setFont(f);
         
         ch1.setFont(f);
@@ -168,7 +168,7 @@ public class Salary extends JFrame implements ActionListener{
         add(p3,"North");
         
         
-        ch1.addMouseListener(new Mouseadapter()
+        ch1.addMouseListener(new MouseAdapter()
         {
                     @Override
                     public void mouseClicked(MouseEvent arg0)
@@ -212,7 +212,7 @@ public class Salary extends JFrame implements ActionListener{
             try
             {
                 ConnectionClass obj1 = new ConnectionClass();
-                String q1 = "insert into salary values('"+0+"','"+Eid+"','"+name+"','"+hra+"','"+da+"','"+mid+"','"+pf+"','"+basic+"','"+month+"')";
+                String q1 = "insert into salary values('"+0+"','"+Eid+"','"+name+"','"+email+"','"+hra+"','"+da+"','"+mid+"','"+pf+"','"+basic+"','"+month+"')";
                 int aa = obj1.stm.executeUpdate(q1);
                 if(aa==1)
                 {
@@ -231,7 +231,7 @@ public class Salary extends JFrame implements ActionListener{
             {
                 exx.printStackTrace();
             }
-        }        }
+        }        
     }
     
     public static void main(String[] args)
