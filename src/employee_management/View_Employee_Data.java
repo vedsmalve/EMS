@@ -1,5 +1,6 @@
-import com.sun.source.tree.UsesTree;
+package employee_management;
 
+import com.sun.source.tree.UsesTree;
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.text.rtf.RTFEditorKit;
@@ -13,14 +14,14 @@ public class View_Employee_Data implements ActionListener
     JButton b1,b2;
     ImageIcon Icon ;
 
-    View_Employee_Data()
+    View_Employee_Data(String Eid)
     {   try
     {
         ConnectionClass obj = new ConnectionClass();
         String s ="select * from employee where Eid='"+Eid+"'";
         ResultSet rs = obj.stm.executeQuery(s);
 
-        While(rs.next())
+        while(rs.next())
         {
             name=rs.getString("name");
             father=rs.getString("Fname");
@@ -155,14 +156,13 @@ public class View_Employee_Data implements ActionListener
     }
     public void actionPerformed(ActionEvent e)
     {
-        if
+        if(e.getSource()==b1)
         {
             JOptionPane.showMessageDialog(null,"printed succesfully");
             f.setVisible(false);
             new Homepage();
 
         }
-
         if (e.getSource()==b2)
         {
             f.setVisible(false);
