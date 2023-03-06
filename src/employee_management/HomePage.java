@@ -191,7 +191,7 @@ public class HomePage extends JFrame implements ActionListener
        }
        else if(comnd.equals("Delete Employee"))
        {
-            new Delete_Employee().setVisible(true);
+            new Delete_employee().setVisible(true);
        }
        else if(comnd.equals("Logout"))
        {
